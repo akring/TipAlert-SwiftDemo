@@ -12,6 +12,8 @@
 		DDA1782C1BBBCB5F00748393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782A1BBBCB5F00748393 /* Main.storyboard */; };
 		DDA1782E1BBBCB5F00748393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782D1BBBCB5F00748393 /* Assets.xcassets */; };
 		DDA178311BBBCB5F00748393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782F1BBBCB5F00748393 /* LaunchScreen.storyboard */; };
+		DDA1783A1BBBCBA500748393 /* TipAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA178391BBBCBA500748393 /* TipAlert.swift */; settings = {ASSET_TAGS = (); }; };
+		DDA1783C1BBBCBFE00748393 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1783B1BBBCBFE00748393 /* CloseButton.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		DDA1782D1BBBCB5F00748393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA178301BBBCB5F00748393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA178321BBBCB5F00748393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA178391BBBCBA500748393 /* TipAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipAlert.swift; sourceTree = "<group>"; };
+		DDA1783B1BBBCBFE00748393 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		DDA178251BBBCB5F00748393 /* TipAlert-SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DDA178381BBBCB6700748393 /* TipAlert-Swift */,
 				DDA178261BBBCB5F00748393 /* AppDelegate.swift */,
 				DDA178281BBBCB5F00748393 /* ViewController.swift */,
 				DDA1782A1BBBCB5F00748393 /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				DDA178321BBBCB5F00748393 /* Info.plist */,
 			);
 			path = "TipAlert-SwiftDemo";
+			sourceTree = "<group>";
+		};
+		DDA178381BBBCB6700748393 /* TipAlert-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				DDA178391BBBCBA500748393 /* TipAlert.swift */,
+				DDA1783B1BBBCBFE00748393 /* CloseButton.swift */,
+			);
+			path = "TipAlert-Swift";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA178291BBBCB5F00748393 /* ViewController.swift in Sources */,
+				DDA1783A1BBBCBA500748393 /* TipAlert.swift in Sources */,
+				DDA1783C1BBBCBFE00748393 /* CloseButton.swift in Sources */,
 				DDA178271BBBCB5F00748393 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
