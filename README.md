@@ -25,5 +25,14 @@ alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给
         }}
 ```
 
+* 需要弹出Alert的时候调用
+
+```
+@IBAction func showAlert(sender: AnyObject) {
+        
+        alert.show()
+    }
+```
+
 # 效果
 ![效果](http://7te7sy.com1.z0.glb.clouddn.com/TipAlert.png)
