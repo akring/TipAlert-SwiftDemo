@@ -1,6 +1,9 @@
 # TipAlert-SwiftDemo
 高仿QQ音乐提示评论Alert的Swift版
 
+# 效果
+![效果](http://7te7sy.com1.z0.glb.clouddn.com/TipAlert.png)
+
 # 安装
 
 将`TipAlert`文件夹拖入项目即可
@@ -34,5 +37,4 @@ alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给
     }
 ```
 
-# 效果
-![效果](http://7te7sy.com1.z0.glb.clouddn.com/TipAlert.png)
+
