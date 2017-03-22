@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - 转换RGB颜色
-func getColor(hexColor:NSString) ->UIColor{
+func getColor(_ hexColor:NSString) ->UIColor{
     
     var redInt:UInt32 = 0
     var greenInt:UInt32 = 0
@@ -19,15 +19,15 @@ func getColor(hexColor:NSString) ->UIColor{
     
     //取红色值
     rangeNSRange.location = 0
-    NSScanner(string: hexColor.substringWithRange(rangeNSRange)).scanHexInt(&redInt)
+    Scanner(string: hexColor.substring(with: rangeNSRange)).scanHexInt32(&redInt)
     
     //取绿色值
     rangeNSRange.location = 2
-    NSScanner(string: hexColor.substringWithRange(rangeNSRange)).scanHexInt(&greenInt)
+    Scanner(string: hexColor.substring(with: rangeNSRange)).scanHexInt32(&greenInt)
     
     //取蓝色值
     rangeNSRange.location = 4
-    NSScanner(string: hexColor.substringWithRange(rangeNSRange)).scanHexInt(&blueInt)
+    Scanner(string: hexColor.substring(with: rangeNSRange)).scanHexInt32(&blueInt)
     
     let red = CGFloat(redInt)/255.0
     let green = CGFloat(greenInt)/255.0
@@ -54,26 +54,26 @@ class TipAlert: UIView {
     var acceptBlock:AcceptBlock? = nil
     var denyBlock:DenyBlock? = nil
     
-    private var bgImageView:UIImageView? = nil
-    private var contextLabel:UILabel? = nil
-    private var alertSize:CGSize? = nil
+    fileprivate var bgImageView:UIImageView? = nil
+    fileprivate var contextLabel:UILabel? = nil
+    fileprivate var alertSize:CGSize? = nil
     
     // MARK: - 初始化方法
     
     init(message:String,image:UIImage,buttonArray:NSArray){
         
-        let rect = CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen().bounds), CGRectGetHeight(UIScreen.mainScreen().bounds)+20)
+        let rect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height+20)
         
         btnTitleArr = buttonArray
         topImage = image
         contextStr = message
-        alertSize = CGSizeMake(rect.size.width-60, rect.size.width-60)
-        alignment = NSTextAlignment.Center
+        alertSize = CGSize(width: rect.size.width-60, height: rect.size.width-60)
+        alignment = NSTextAlignment.center
         
         super.init(frame: rect)
         
         let bgView = UIView(frame: rect)
-        bgView.backgroundColor = UIColor.blackColor()
+        bgView.backgroundColor = UIColor.black
         bgView.alpha = 0.8
         self.addSubview(bgView)
     }
@@ -86,43 +86,43 @@ class TipAlert: UIView {
     /**
     创建Alert主体
     */
-    private func addAlertImages(){
+    fileprivate func addAlertImages(){
         
-        let bgRect = CGRectMake(0, 0, (alertSize?.width)!, (alertSize?.height)!)
+        let bgRect = CGRect(x: 0, y: 0, width: (alertSize?.width)!, height: (alertSize?.height)!)
         
         bgImageView = UIImageView()
-        bgImageView!.backgroundColor = UIColor.whiteColor()
+        bgImageView!.backgroundColor = UIColor.white
         bgImageView!.frame = bgRect
-        bgImageView!.userInteractionEnabled = true
+        bgImageView!.isUserInteractionEnabled = true
         bgImageView!.layer.masksToBounds = true
         bgImageView!.layer.cornerRadius = 10
-        bgImageView!.layer.borderColor = UIColor(white: 0.147, alpha: 1).CGColor
+        bgImageView!.layer.borderColor = UIColor(white: 0.147, alpha: 1).cgColor
         bgImageView!.layer.borderWidth = 1;
         self.addSubview(bgImageView!)
         
-        let imageRect = CGRectMake(0, 0, (alertSize?.width)!, (alertSize?.width)!/2)
+        let imageRect = CGRect(x: 0, y: 0, width: (alertSize?.width)!, height: (alertSize?.width)!/2)
         let topImageView = UIImageView()
         topImageView.image = topImage
-        topImageView.backgroundColor = UIColor.whiteColor()
+        topImageView.backgroundColor = UIColor.white
         topImageView.frame = imageRect
         bgImageView?.addSubview(topImageView)
     }
     /**
     创建文字Label
     */
-    private func addAlertLabels(){
+    fileprivate func addAlertLabels(){
         
         let width = (alertSize?.width)!-60
         
-        let rect = CGRectMake((CGRectGetWidth((bgImageView?.frame)!)-width)/2, (alertSize?.width)!/2.2, width, (alertSize?.width)!/3)
+        let rect = CGRect(x: ((bgImageView?.frame)!.width-width)/2, y: (alertSize?.width)!/2.2, width: width, height: (alertSize?.width)!/3)
         
         contextLabel = UILabel(frame: rect)
-        contextLabel!.backgroundColor = UIColor.clearColor()
+        contextLabel!.backgroundColor = UIColor.clear
         contextLabel!.textAlignment = alignment
-        contextLabel!.textColor = UIColor.blackColor()
-        contextLabel!.font = UIFont.systemFontOfSize(15)
+        contextLabel!.textColor = UIColor.black
+        contextLabel!.font = UIFont.systemFont(ofSize: 15)
         contextLabel!.numberOfLines = 3
-        contextLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        contextLabel!.lineBreakMode = NSLineBreakMode.byWordWrapping
         contextLabel!.text = contextStr
         
         bgImageView?.addSubview(contextLabel!)
@@ -131,45 +131,45 @@ class TipAlert: UIView {
     /**
     创建关闭按钮
     */
-    private func addCloseBtn(){
+    fileprivate func addCloseBtn(){
         
-        let button = CloseButton(type: UIButtonType.System)
-        button.frame = CGRectMake(CGRectGetMaxX((bgImageView?.frame)!)-18, CGRectGetMinY((bgImageView?.frame)!)-10, 26, 26)
-button.addTarget(self, action: "dismissAnimation", forControlEvents: UIControlEvents.TouchUpInside)
+        let button = CloseButton(type: UIButtonType.system)
+        button.frame = CGRect(x: (bgImageView?.frame)!.maxX-18, y: (bgImageView?.frame)!.minY-10, width: 26, height: 26)
+button.addTarget(self, action: #selector(TipAlert.dismissAnimation), for: UIControlEvents.touchUpInside)
         self.addSubview(button)
     }
     /**
     创建按钮
     */
-    private func addAlertButtons(){
+    fileprivate func addAlertButtons(){
         
         for index in 0..<btnTitleArr.count{
             
             if btnTitleArr.count == 2{
                 
-                let button = UIButton(type: UIButtonType.Custom)
+                let button = UIButton(type: UIButtonType.custom)
                 button.layer.masksToBounds = true
                 button.layer.cornerRadius = 4
-                button.setTitle(btnTitleArr[index] as? String, forState: UIControlState.Normal)
-                button.titleLabel?.font = UIFont.systemFontOfSize(15)
-                button.addTarget(self, action: "buttonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+                button.setTitle(btnTitleArr[index] as? String, for: UIControlState())
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+                button.addTarget(self, action: #selector(TipAlert.buttonClick(_:)), for: UIControlEvents.touchUpInside)
                 
-                let offset = (CGRectGetWidth(bgImageView!.frame)-120*2)/3
-                button.frame = CGRectMake(offset*CGFloat(index+1)+120*CGFloat(index), CGRectGetHeight(bgImageView!.frame)-50, 120, 38)
+                let offset = (bgImageView!.frame.width-120*2)/3
+                button.frame = CGRect(x: offset*CGFloat(index+1)+120*CGFloat(index), y: bgImageView!.frame.height-50, width: 120, height: 38)
                 
                 button.tag = index
                 
                 if index == 0{//拒绝按钮
                     
                     button.layer.borderWidth = 1.0
-                    button.layer.borderColor = UIColor(white: 0.8, alpha: 1.0).CGColor
+                    button.layer.borderColor = UIColor(white: 0.8, alpha: 1.0).cgColor
                     button.backgroundColor = getColor("F4F3F3")
-                    button.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+                    button.setTitleColor(UIColor.darkGray, for: UIControlState())
                 }
                 else{//统一按钮
                     
                     button.backgroundColor = getColor("39C27E")
-                    button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+                    button.setTitleColor(UIColor.white, for: UIControlState())
                 }
                 
                 bgImageView?.addSubview(button)
@@ -178,7 +178,7 @@ button.addTarget(self, action: "dismissAnimation", forControlEvents: UIControlEv
     }
     
     // MARK: - 点击按钮回调
-    internal func buttonClick(button:UIButton){
+    internal func buttonClick(_ button:UIButton){
         
         if button.tag == 0{
             
@@ -203,7 +203,7 @@ button.addTarget(self, action: "dismissAnimation", forControlEvents: UIControlEv
     
         self.alpha = 0
         
-        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.alpha = 1.0
             }, completion: nil)
     }
@@ -212,7 +212,7 @@ button.addTarget(self, action: "dismissAnimation", forControlEvents: UIControlEv
         
         self.alpha = 1.0
         
-        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.alpha = 0.0
             }, completion: nil)
     }
@@ -221,7 +221,7 @@ button.addTarget(self, action: "dismissAnimation", forControlEvents: UIControlEv
     
     func show(){
         
-        let alertWindow = UIApplication.sharedApplication().keyWindow
+        let alertWindow = UIApplication.shared.keyWindow
         
         self.addAlertImages()
         self.addAlertLabels()

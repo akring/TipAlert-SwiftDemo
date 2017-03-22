@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     - parameter sender:
     */
-    @IBAction func showAlert(sender: AnyObject) {
+    @IBAction func showAlert(_ sender: AnyObject) {
         
         alert.show()
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class CloseButton: UIButton {
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
@@ -19,43 +19,43 @@ class CloseButton: UIButton {
         let color = UIColor(red: 0.881, green: 0.881, blue: 0.881, alpha: 1.000)
         
         //// Group
-        CGContextSaveGState(context)
-        CGContextScaleCTM(context, 0.5, 0.5)
+        context?.saveGState()
+        context?.scaleBy(x: 0.5, y: 0.5)
         
         
         
         //// Oval Drawing
-        let ovalPath = UIBezierPath(ovalInRect: CGRectMake(0, 0, 50, 50))
+        let ovalPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 50, height: 50))
         color.setFill()
         ovalPath.fill()
         
         
         //// Rectangle Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 25.5, 25)
-        CGContextRotateCTM(context, -45 * CGFloat(M_PI) / 180)
+        context?.saveGState()
+        context?.translateBy(x: 25.5, y: 25)
+        context?.rotate(by: -45 * CGFloat(M_PI) / 180)
         
-        let rectanglePath = UIBezierPath(rect: CGRectMake(-1.5, -15, 3, 30))
-        UIColor.lightGrayColor().setFill()
+        let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -15, width: 3, height: 30))
+        UIColor.lightGray.setFill()
         rectanglePath.fill()
         
-        CGContextRestoreGState(context)
+        context?.restoreGState()
         
         
         //// Rectangle 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 25.67, 25.33)
-        CGContextRotateCTM(context, -135 * CGFloat(M_PI) / 180)
+        context?.saveGState()
+        context?.translateBy(x: 25.67, y: 25.33)
+        context?.rotate(by: -135 * CGFloat(M_PI) / 180)
         
-        let rectangle2Path = UIBezierPath(rect: CGRectMake(-1.5, -15, 3, 30))
-        UIColor.lightGrayColor().setFill()
+        let rectangle2Path = UIBezierPath(rect: CGRect(x: -1.5, y: -15, width: 3, height: 30))
+        UIColor.lightGray.setFill()
         rectangle2Path.fill()
         
-        CGContextRestoreGState(context)
+        context?.restoreGState()
         
         
         
-        CGContextRestoreGState(context)
+        context?.restoreGState()
 
     }
 

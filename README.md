@@ -1,3 +1,6 @@
+![Swift3](https://img.shields.io/badge/Swift%203-Yes-brightgreen.svg)
+[![GitHub issues](https://img.shields.io/github/issues/akring/TipAlert-SwiftDemo.svg)](https://github.com/akring/TipAlert-SwiftDemo/issues)
+[![Magnum CI](https://img.shields.io/magnumci/ci/96ffb83fa700f069024921b0702e76ff.svg)]()
 # TipAlert-SwiftDemo
 高仿QQ音乐提示评论Alert的Swift版
 
