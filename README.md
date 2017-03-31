@@ -1,4 +1,4 @@
-![Swift3](https://img.shields.io/badge/Swift%203-Yes-brightgreen.svg)
+![Swift3](https://img.shields.io/badge/Swift3.1-YES-brightgreen.svg)
 [![GitHub issues](https://img.shields.io/github/issues/akring/TipAlert-SwiftDemo.svg)](https://github.com/akring/TipAlert-SwiftDemo/issues)
 [![Magnum CI](https://img.shields.io/magnumci/ci/96ffb83fa700f069024921b0702e76ff.svg)]()
 # TipAlert-SwiftDemo
