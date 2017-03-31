@@ -33,7 +33,7 @@ class CloseButton: UIButton {
         //// Rectangle Drawing
         context?.saveGState()
         context?.translateBy(x: 25.5, y: 25)
-        context?.rotate(by: -45 * CGFloat(M_PI) / 180)
+        context?.rotate(by: -45 * CGFloat(Double.pi) / 180)
         
         let rectanglePath = UIBezierPath(rect: CGRect(x: -1.5, y: -15, width: 3, height: 30))
         UIColor.lightGray.setFill()
@@ -45,7 +45,7 @@ class CloseButton: UIButton {
         //// Rectangle 2 Drawing
         context?.saveGState()
         context?.translateBy(x: 25.67, y: 25.33)
-        context?.rotate(by: -135 * CGFloat(M_PI) / 180)
+        context?.rotate(by: -135 * CGFloat(Double.pi) / 180)
         
         let rectangle2Path = UIBezierPath(rect: CGRect(x: -1.5, y: -15, width: 3, height: 30))
         UIColor.lightGray.setFill()
