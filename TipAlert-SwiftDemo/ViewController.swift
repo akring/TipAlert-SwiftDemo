@@ -7,15 +7,14 @@
 //
 
 import UIKit
+import TipAlert
 
 class ViewController: UIViewController {
-
-    var alert:TipAlert!
+    
+    let alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给点鼓励好不好呢？", image: UIImage(named: "exampleImage")!, buttonArray: ["反馈问题","鼓励我们"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给点鼓励好不好呢？", image: UIImage(named: "exampleImage")!, buttonArray: ["反馈问题","鼓励我们"])
         
         alert.acceptBlock = {
             

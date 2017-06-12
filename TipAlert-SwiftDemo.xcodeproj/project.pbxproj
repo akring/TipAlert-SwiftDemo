@@ -12,9 +12,36 @@
 		DDA1782C1BBBCB5F00748393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782A1BBBCB5F00748393 /* Main.storyboard */; };
 		DDA1782E1BBBCB5F00748393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782D1BBBCB5F00748393 /* Assets.xcassets */; };
 		DDA178311BBBCB5F00748393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA1782F1BBBCB5F00748393 /* LaunchScreen.storyboard */; };
-		DDA1783A1BBBCBA500748393 /* TipAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA178391BBBCBA500748393 /* TipAlert.swift */; };
-		DDA1783C1BBBCBFE00748393 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA1783B1BBBCBFE00748393 /* CloseButton.swift */; };
+		EC807DB01EEE6EC7005F2E3B /* TipAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = EC807DAE1EEE6EC7005F2E3B /* TipAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC807DB31EEE6EC7005F2E3B /* TipAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC807DAC1EEE6EC7005F2E3B /* TipAlert.framework */; };
+		EC807DB41EEE6EC7005F2E3B /* TipAlert.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC807DAC1EEE6EC7005F2E3B /* TipAlert.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC807DBB1EEE6F31005F2E3B /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC807DB91EEE6F31005F2E3B /* CloseButton.swift */; };
+		EC807DBC1EEE6F31005F2E3B /* TipAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC807DBA1EEE6F31005F2E3B /* TipAlert.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC807DB11EEE6EC7005F2E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DDA1781B1BBBCB5F00748393 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC807DAB1EEE6EC7005F2E3B;
+			remoteInfo = TipAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC807DB81EEE6EC7005F2E3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC807DB41EEE6EC7005F2E3B /* TipAlert.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DDA178231BBBCB5F00748393 /* TipAlert-SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TipAlert-SwiftDemo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,12 +51,23 @@
 		DDA1782D1BBBCB5F00748393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA178301BBBCB5F00748393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA178321BBBCB5F00748393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDA178391BBBCBA500748393 /* TipAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipAlert.swift; sourceTree = "<group>"; };
-		DDA1783B1BBBCBFE00748393 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		EC807DAC1EEE6EC7005F2E3B /* TipAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TipAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC807DAE1EEE6EC7005F2E3B /* TipAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipAlert.h; sourceTree = "<group>"; };
+		EC807DAF1EEE6EC7005F2E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC807DB91EEE6F31005F2E3B /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		EC807DBA1EEE6F31005F2E3B /* TipAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DDA178201BBBCB5F00748393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC807DB31EEE6EC7005F2E3B /* TipAlert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC807DA81EEE6EC7005F2E3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA178251BBBCB5F00748393 /* TipAlert-SwiftDemo */,
+				EC807DAD1EEE6EC7005F2E3B /* TipAlert */,
 				DDA178241BBBCB5F00748393 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA178231BBBCB5F00748393 /* TipAlert-SwiftDemo.app */,
+				EC807DAC1EEE6EC7005F2E3B /* TipAlert.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,7 +98,6 @@
 		DDA178251BBBCB5F00748393 /* TipAlert-SwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DDA178381BBBCB6700748393 /* TipAlert-Swift */,
 				DDA178261BBBCB5F00748393 /* AppDelegate.swift */,
 				DDA178281BBBCB5F00748393 /* ViewController.swift */,
 				DDA1782A1BBBCB5F00748393 /* Main.storyboard */,
@@ -69,16 +108,29 @@
 			path = "TipAlert-SwiftDemo";
 			sourceTree = "<group>";
 		};
-		DDA178381BBBCB6700748393 /* TipAlert-Swift */ = {
+		EC807DAD1EEE6EC7005F2E3B /* TipAlert */ = {
 			isa = PBXGroup;
 			children = (
-				DDA178391BBBCBA500748393 /* TipAlert.swift */,
-				DDA1783B1BBBCBFE00748393 /* CloseButton.swift */,
+				EC807DB91EEE6F31005F2E3B /* CloseButton.swift */,
+				EC807DBA1EEE6F31005F2E3B /* TipAlert.swift */,
+				EC807DAE1EEE6EC7005F2E3B /* TipAlert.h */,
+				EC807DAF1EEE6EC7005F2E3B /* Info.plist */,
 			);
-			path = "TipAlert-Swift";
+			path = TipAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EC807DA91EEE6EC7005F2E3B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC807DB01EEE6EC7005F2E3B /* TipAlert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		DDA178221BBBCB5F00748393 /* TipAlert-SwiftDemo */ = {
@@ -88,15 +140,35 @@
 				DDA1781F1BBBCB5F00748393 /* Sources */,
 				DDA178201BBBCB5F00748393 /* Frameworks */,
 				DDA178211BBBCB5F00748393 /* Resources */,
+				EC807DB81EEE6EC7005F2E3B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EC807DB21EEE6EC7005F2E3B /* PBXTargetDependency */,
 			);
 			name = "TipAlert-SwiftDemo";
 			productName = "TipAlert-SwiftDemo";
 			productReference = DDA178231BBBCB5F00748393 /* TipAlert-SwiftDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EC807DAB1EEE6EC7005F2E3B /* TipAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC807DB71EEE6EC7005F2E3B /* Build configuration list for PBXNativeTarget "TipAlert" */;
+			buildPhases = (
+				EC807DA71EEE6EC7005F2E3B /* Sources */,
+				EC807DA81EEE6EC7005F2E3B /* Frameworks */,
+				EC807DA91EEE6EC7005F2E3B /* Headers */,
+				EC807DAA1EEE6EC7005F2E3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TipAlert;
+			productName = TipAlert;
+			productReference = EC807DAC1EEE6EC7005F2E3B /* TipAlert.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,7 +181,14 @@
 				TargetAttributes = {
 					DDA178221BBBCB5F00748393 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = XE778GA928;
 						LastSwiftMigration = 0820;
+					};
+					EC807DAB1EEE6EC7005F2E3B = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = XE778GA928;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -127,6 +206,7 @@
 			projectRoot = "";
 			targets = (
 				DDA178221BBBCB5F00748393 /* TipAlert-SwiftDemo */,
+				EC807DAB1EEE6EC7005F2E3B /* TipAlert */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +222,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC807DAA1EEE6EC7005F2E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -150,13 +237,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDA178291BBBCB5F00748393 /* ViewController.swift in Sources */,
-				DDA1783A1BBBCBA500748393 /* TipAlert.swift in Sources */,
-				DDA1783C1BBBCBFE00748393 /* CloseButton.swift in Sources */,
 				DDA178271BBBCB5F00748393 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC807DA71EEE6EC7005F2E3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC807DBC1EEE6F31005F2E3B /* TipAlert.swift in Sources */,
+				EC807DBB1EEE6F31005F2E3B /* CloseButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC807DB21EEE6EC7005F2E3B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC807DAB1EEE6EC7005F2E3B /* TipAlert */;
+			targetProxy = EC807DB11EEE6EC7005F2E3B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DDA1782A1BBBCB5F00748393 /* Main.storyboard */ = {
@@ -267,7 +369,9 @@
 		DDA178361BBBCB5F00748393 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XE778GA928;
 				INFOPLIST_FILE = "TipAlert-SwiftDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.akring.TipAlert-SwiftDemo";
@@ -279,12 +383,73 @@
 		DDA178371BBBCB5F00748393 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XE778GA928;
 				INFOPLIST_FILE = "TipAlert-SwiftDemo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.akring.TipAlert-SwiftDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EC807DB51EEE6EC7005F2E3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XE778GA928;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TipAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvjun.TipAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EC807DB61EEE6EC7005F2E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XE778GA928;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TipAlert/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvjun.TipAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -308,6 +473,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EC807DB71EEE6EC7005F2E3B /* Build configuration list for PBXNativeTarget "TipAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC807DB51EEE6EC7005F2E3B /* Debug */,
+				EC807DB61EEE6EC7005F2E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
