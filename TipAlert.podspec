@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "TipAlert"
   s.version      = "1.0.0"
-  s.summary      = "Beautiful alert with picture and button. "
+  s.summary      = "Beautiful alert with picture and button."
 
   s.description  = <<-DESC
                    TipAlert is a lightweight and pure Swift implemented library for showing alert with picture and button. Always used for uset tips and rateing.
@@ -18,13 +18,12 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "9.0"
 
-  s.source       = { :git => "git@github.com:akring/TipAlert-SwiftDemo.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/akring/TipAlert-SwiftDemo.git", :tag => s.version }
   
   s.source_files  = ["TipAlert/*.swift", "TipAlert/TipAlert.h", "TipAlert/TipAlert.swift"]
   s.public_header_files = ["TipAlert/TipAlert.h"]
   
   s.requires_arc = true
-  s.framework = ""
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
 end
