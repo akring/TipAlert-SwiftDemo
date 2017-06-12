@@ -1,4 +1,5 @@
 ![Swift3](https://img.shields.io/badge/Swift3.1-YES-brightgreen.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/v/TipAlert.svg)]()
 [![GitHub issues](https://img.shields.io/github/issues/akring/TipAlert-SwiftDemo.svg)](https://github.com/akring/TipAlert-SwiftDemo/issues)
 [![Magnum CI](https://img.shields.io/magnumci/ci/96ffb83fa700f069024921b0702e76ff.svg)]()
 # TipAlert-SwiftDemo
@@ -9,7 +10,12 @@
 
 # 安装
 
-将`TipAlert`文件夹拖入项目即可
+#### 手动安装
+将 `TipAlert` 文件夹拖入项目即可
+
+#### Cocoapods
+
+`pod 'TipAlert'`
 
 # 使用
 
@@ -18,7 +24,7 @@ API部分和系统自带的UIAlertView类似，点击按钮的回调使用了Blo
 
 * 创建Alert并展示：
 
-```
+```swift
 alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给点鼓励好不好呢？", image: UIImage(named: "exampleImage")!, buttonArray: ["反馈问题","鼓励我们"])
         
         alert.acceptBlock = {
@@ -33,7 +39,7 @@ alert = TipAlert(message: "卖萌求鼓励\nXXX新版本用着还喜欢么，给
 
 * 需要弹出Alert的时候调用
 
-```
+```swift
 @IBAction func showAlert(sender: AnyObject) {
         
         alert.show()
